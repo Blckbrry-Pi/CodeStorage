@@ -12,8 +12,8 @@ let p5Library = {
         
         console.log(WebGL_RoundedRect_radius/WebGL_RoundedRect_width);
         console.log(1 - WebGL_RoundedRect_radius/WebGL_RoundedRect_width);
-        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 0);
-        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, 1 - WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 0);
+        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, /*WebGL_RoundedRect_radius/WebGL_RoundedRect_width*/ 0, 0);
+        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, 1/* - WebGL_RoundedRect_radius/WebGL_RoundedRect_width*/, 0);
 
         for(WebGL_RoundedRect_counter1 = 0; WebGL_RoundedRect_counter1 < Math.PI / 2; WebGL_RoundedRect_counter1 += Math.PI / WebGL_RoundedRect_resolution) {
             vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius + sin(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_radius - cos(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius);
@@ -26,8 +26,8 @@ let p5Library = {
             vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius + sin(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height - WebGL_RoundedRect_radius - cos(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius);
         }
 
-        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height, WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 1);
-        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height, 1 - WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 1);
+        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height, /*WebGL_RoundedRect_radius/WebGL_RoundedRect_width*/ 0, 1);
+        vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height, 1/* - WebGL_RoundedRect_radius/WebGL_RoundedRect_width*/, 1);
 
         for(WebGL_RoundedRect_counter1 = Math.PI; WebGL_RoundedRect_counter1 < Math.PI / 2 * 3; WebGL_RoundedRect_counter1 += Math.PI / WebGL_RoundedRect_resolution) {
             vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius + sin(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos + WebGL_RoundedRect_height - WebGL_RoundedRect_radius - cos(WebGL_RoundedRect_counter1) * WebGL_RoundedRect_radius);
