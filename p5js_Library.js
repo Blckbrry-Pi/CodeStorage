@@ -9,7 +9,9 @@ let p5Library = {
         
         let WebGL_RoundedRect_counter1;
         beginShape();
-
+        
+        console.log(WebGL_RoundedRect_radius/WebGL_RoundedRect_width);
+        console.log(1 - WebGL_RoundedRect_radius/WebGL_RoundedRect_width);
         vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 0);
         vertex(WebGL_RoundedRect_xPos + WebGL_RoundedRect_width - WebGL_RoundedRect_radius, WebGL_RoundedRect_yPos, 1 - WebGL_RoundedRect_radius/WebGL_RoundedRect_width, 0);
 
